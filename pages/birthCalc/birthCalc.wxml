@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="input-section">
+    <text>请输入宝贝的小名：</text>
+    <input type="text" placeholder="请输入宝贝的小名" bindinput="onNameInput" value="{{nickname}}"/>
+  </view>
+  
+  <view class="input-section">
+    <text>请输入宝贝的出生日期：</text>
+    <picker mode="date" bindchange="onDateChange">
+      <view class="picker">
+        请选择日期：{{birthDate ? birthDate : '未选择'}}
+      </view>
+    </picker>
+  </view>
+
+  <view wx:if="{{!hasData}}">
+    <button class="confirm-btn" hover-class="confirm-btn-active" bindtap="onConfirm">确定</button>
+    <button class="clear-btn" hover-class="clear-btn-active" bindtap="clearData">清除所有数据</button>
+  </view>
+
+  <view wx:if="{{hasData}}">
+    <button class="confirm-btn" hover-class="confirm-btn-active" bindtap="onConfirm">重新计算</button>
+    <text>这是{{nickname}}宝贝出生的第{{daysSinceBirth}} 天！</text>
+    <text>{{nickname}}宝贝已经{{ageYears}}岁{{ageMonths}}个月啦！</text>
+    <text>距离{{nickname}}宝贝下个生日还有{{daysToNextBirthday}}天！</text>
+    <button class="clear-btn" hover-class="clear-btn-active" bindtap="clearData">清除所有数据</button>
+  </view>
+
+</view>

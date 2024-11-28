@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/birthCalc/birthCalc",
+    "pages/vaccineCalc/vaccineCalc",
+    "pages/line/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "宝宝成长小工具",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#2fa535",
+    "backgroundColor": "#87CEEB",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/birthCalc/birthCalc",
+        "text": "出生日期计算",
+        "iconPath": "pages/image/time2.jpg",
+        "selectedIconPath": "pages/image/time.jpg"
+      },
+      {
+        "pagePath": "pages/vaccineCalc/vaccineCalc",
+        "text": "疫苗时间计算",
+        "iconPath": "pages/image/zhen.jpg",
+        "selectedIconPath": "pages/image/zhen1.jpg"
+      },
+      {
+        "pagePath": "pages/line/index",
+        "text": "宝宝生长曲线",
+        "iconPath": "pages/image/zb.png",
+        "selectedIconPath": "pages/image/zb.jpg"
+      }
+    ]
+  },
+  "style": "v2",
+  "renderer": "skyline",
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "defaultContentBox": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="header">
+    出生日期：{{birthDate}}
+  </view>
+  <view class="text">
+    注意：标准黄色的为自费疫苗；本疫苗接种时间参考了《国家免疫规划疫苗儿童免疫程序及说明》，实际以各地接种疫苗种类和时间为准；接种日期并非准确时间，需要根据实际情况计算。
+  </view>
+  <scroll-view type="list" scroll-y="true" class="vaccine-scroll" style="height: 80vh;">
+    <view class="table">
+      <view class="table-row header-row">
+        <view class="table-cell date">接种日期</view>
+        <view class="table-cell vaccine-name">疫苗名称</view>
+        <view class="table-cell note">说明</view>
+      </view>
+
+      <block wx:for="{{vaccineSchedule}}" wx:key="index">
+        <view class="table-row" wx:if="{{item.isFree===true}}">
+          <view class="table-cell date">{{item.date}}</view>
+          <view class="table-cell vaccine-name">{{item.name}}</view>
+          <view class="table-cell note">{{item.note}}</view>
+        </view>
+        <view class="table-row alt-row" wx:else>
+          <view class="table-cell date">{{item.date}}</view>
+          <view class="table-cell vaccine-name">{{item.name}}</view>
+          <view class="table-cell note">{{item.note}}</view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

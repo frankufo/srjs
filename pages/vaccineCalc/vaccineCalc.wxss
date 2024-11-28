@@ -1,0 +1,93 @@
+/* 容器样式 */
+.container {
+  padding: 20rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text{ 
+  width: 100%;
+  margin-top: 20rpx;
+  font-size: 20rpx;
+  word-wrap: break-word;  /* 自动换行 */
+}
+
+/* 表头样式 */
+.header {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  margin-top: 50rpx;
+}
+
+/* 表格容器样式 */
+.table-container {
+  width: 90%;
+  margin-top: 20rpx;
+}
+
+.vaccine-scroll {
+  flex: 3;
+  height: 60%;
+  background-color: #fff;
+}
+
+
+/* 表格样式 */
+.table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* 表格行样式 */
+.table-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* 表头行样式 */
+.header-row {
+  display: flex;
+  background-color: #7cbbe6dc;
+  font-weight: bold;
+}
+
+/* 表格单元格样式 */
+.table-cell {
+  padding: 20rpx;
+  text-align: center;
+  border: 1px solid #ddd;
+  font-size: 24rpx;
+  word-wrap: break-word;  /* 自动换行 */
+  white-space: normal;    /* 允许内容正常换行 */
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  width: 25%;              /* 控制日期列宽度 */
+  display: flex;           /* 使用 flexbox 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center;     /* 垂直居中 */
+  padding: 0 5rpx;         /* 上下无内边距，左右保留5rpx */
+  box-sizing: border-box;   /* 确保padding不会影响宽度 */
+  white-space: nowrap;      /* 确保日期不换行 */
+  overflow: hidden;         /* 防止内容溢出 */
+}
+
+/* 疫苗名称列样式，自动适应宽度 */
+.vaccine-name {
+  width: 41%;  /* 剩余的宽度用于疫苗名称 */
+  word-wrap: break-word; /* 允许换行 */
+}
+.note {
+  width: 34%;  /* 剩余的宽度用于疫苗名称 */
+  word-wrap: break-word; /* 允许换行 */
+}
+.alt-row {
+  background-color: #f7f8a0;
+}
